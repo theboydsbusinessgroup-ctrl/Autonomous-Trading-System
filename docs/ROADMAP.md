@@ -4,19 +4,19 @@
 - [x] Repository created
 - [x] Architecture specification
 - [x] Risk policy
-- [ ] Python package skeleton
+- [x] Python package skeleton
 - [ ] Configuration system
 - [ ] Logging and audit framework
-- [ ] CI test pipeline
+- [x] CI test pipeline (domain regression suite)
 
 ## Phase 1 — Domain Core
-- [ ] Instrument model
+- [x] Instrument model (minimal)
 - [ ] Quote/bar models
-- [ ] Signal model
-- [ ] Trade intent model
-- [ ] Order model
-- [ ] Fill model
-- [ ] Position model
+- [x] Signal model (minimal)
+- [x] Trade intent model (minimal)
+- [x] Order model (minimal)
+- [x] Fill model (minimal)
+- [x] Position model (minimal)
 - [ ] Portfolio/account model
 - [ ] Session model
 

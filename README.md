@@ -34,3 +34,15 @@ The first operational implementation is an equity-only paper trader. Interfaces 
 
 ## Status
 Architecture initialized. No live-order functionality is enabled.
+
+Implemented code is a domain-model foundation and optional telemetry adapter. The risk governor, data pipeline, backtester, broker, and paper trader described above are planned; the policy limits in `.env.example` are not enforced by a running system yet.
+
+## Local validation
+
+Python 3.12+ is required. The domain regression tests use only the standard library:
+
+```bash
+PYTHONPATH=src python -m unittest discover -s tests -v
+```
+
+Market observations reject crossed quotes, invalid Decimal prices, and naive timestamps. Their age check rejects future observations instead of treating them as fresh. Trade intents, fills, and risk decisions validate basic quantity and price invariants. These checks support the future risk governor; they do not implement portfolio limits or authorize execution.
